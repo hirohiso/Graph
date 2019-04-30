@@ -17,6 +17,9 @@ public class GraphTest {
         //nodesetがnode1を持っているか確認
         assertTrue(nodeset.has(node1));
 
+        Node node3 = new Node();
+        //nodesetがnode3を持っていないか確認
+        assertFalse(nodeset.has(node3));
         /*
         EdgeSet edgeset = new EdgeSet();
         Edge edge1 = new Edge();
@@ -35,6 +38,18 @@ public class GraphTest {
         //グラフのNode1につながっているEdgeにedge1があるか確認
         assertEquals(edge1,graph.getEgde(node1));
         */
+    }
+
+    @Test
+    public void testEdgeSetConstruct(){
+        EdgeSet edgeset = new EdgeSet();
+        Edge edge1 = new Edge();
+        edgeset.add(edge1);
+        //edgesetがnode1を持っているか確認
+        assertTrue(edgeset.has(edge1));
+        Edge edge2 = new Edge();
+        //edgesetがedge2を持っているか確認
+        assertFalse(edgeset.has(edge2));
     }
 
 }
