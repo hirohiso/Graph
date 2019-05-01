@@ -22,20 +22,6 @@ public class GraphTest {
         Node node3 = new Node();
         // nodesetがnode3を持っていないか確認
         assertFalse(nodeset.has(node3));
-        /*
-         * EdgeSet edgeset = new EdgeSet(); Edge edge1 = new Edge();
-         * edgeset.add(edge1);
-         *
-         * MappingSet funcset = new MappingSet(); Mapping func = new
-         * Mapping(edge1,node1,node2); funcset.add(func);
-         *
-         * Graph graph = new Graph(nodeset,edgeset,funcset);
-         *
-         * //グラフがnode1を持っているか確認 assertTrue(graph.hasNode(node1));
-         * //グラフがEdgeを持っているか確認 assertTrue(graph.hasEdge(node1));
-         * //グラフのNode1につながっているEdgeにedge1があるか確認
-         * assertEquals(edge1,graph.getEgde(node1));
-         */
     }
 
     @Test
