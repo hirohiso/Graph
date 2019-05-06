@@ -214,4 +214,11 @@ public class GraphTest {
 
     }
 
+    @Test
+    public void testEdgeCost(){
+        Edge edge1 = new Edge(3);
+        assertEquals(3,edge1.getCost());
+    }
+
+
 }
