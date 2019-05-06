@@ -22,6 +22,13 @@ public class Graph {
     }
 
 
+    public boolean searchDFS(Node node1, Node node2) {
+        DfsSearch dfs = new DfsSearch(this.mapping);
+        boolean result = dfs.searchDfs(node1, node2);
+        return result;
+    }
+
+
 
 
 }
