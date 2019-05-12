@@ -1,5 +1,5 @@
 package hirohiso.util.graph;
 
-public class Node {
+public class Node implements Element{
 
 }

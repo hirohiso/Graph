@@ -1,17 +1,15 @@
 package hirohiso.util.graph;
 
-import java.util.ArrayList;
+public class NodeSet extends ElementSet{
 
-public class NodeSet {
-    private ArrayList<Node> nodeList = new ArrayList<Node>();
-
-    public void add(Node node) {
-        nodeList.add(node);
+    @Override
+    boolean chackEnableClass(Element e) {
+        if (e instanceof Node) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public boolean has(Node node) {
-        boolean result = this.nodeList.contains(node);
-        return result;
-    }
 
 }
