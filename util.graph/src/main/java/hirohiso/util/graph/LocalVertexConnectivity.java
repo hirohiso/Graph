@@ -3,6 +3,16 @@ package hirohiso.util.graph;
 import java.util.HashMap;
 import java.util.List;
 
+import hirohiso.util.graph.structure.Element;
+import hirohiso.util.graph.structure.Graph;
+import hirohiso.util.graph.structure.Mapping;
+import hirohiso.util.graph.structure.MappingSet;
+import hirohiso.util.graph.structure.edge.CostEdge;
+import hirohiso.util.graph.structure.edge.Edge;
+import hirohiso.util.graph.structure.edge.EdgeSet;
+import hirohiso.util.graph.structure.node.Node;
+import hirohiso.util.graph.structure.node.NodeSet;
+
 public class LocalVertexConnectivity {
     private Graph originalGraph;;
 
@@ -37,6 +47,7 @@ public class LocalVertexConnectivity {
             Mapping map = new Mapping(edge1, in, out);
             targetMappingSet.add(map);
 
+            //次の処理のために、Vn→Vn_inとVn_outの紐付けを格納しておく
             NodeIn.put(node, in);
             NodeOut.put(node, out);
         }
@@ -54,10 +65,12 @@ public class LocalVertexConnectivity {
             Node Vn = nodelist.get(0);
             Node Vm = nodelist.get(1);
 
+            //前処理で格納しておいた紐付けからin、outを取得する
             Node vn_in = NodeIn.get(Vn);
             Node vn_out = NodeOut.get(Vn);
             Node vm_in = NodeIn.get(Vm);
             Node vm_out = NodeOut.get(Vm);
+
             Mapping map1 = new Mapping(edge1, vn_out, vm_in);
             Mapping map2 = new Mapping(edge2, vm_out, vn_in);
             targetMappingSet.add(map1);

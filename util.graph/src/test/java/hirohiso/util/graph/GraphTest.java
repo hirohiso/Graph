@@ -6,6 +6,18 @@ import java.util.List;
 
 import org.junit.Test;
 
+import hirohiso.util.graph.structure.Element;
+import hirohiso.util.graph.structure.ElementSet;
+import hirohiso.util.graph.structure.Graph;
+import hirohiso.util.graph.structure.LinkedMappingSet;
+import hirohiso.util.graph.structure.Mapping;
+import hirohiso.util.graph.structure.MappingSet;
+import hirohiso.util.graph.structure.edge.CostEdge;
+import hirohiso.util.graph.structure.edge.Edge;
+import hirohiso.util.graph.structure.edge.EdgeSet;
+import hirohiso.util.graph.structure.node.Node;
+import hirohiso.util.graph.structure.node.NodeSet;
+
 public class GraphTest {
 
     @Test

@@ -1,4 +1,4 @@
-package hirohiso.util.graph;
+package hirohiso.util.graph.structure.edge;
 
 public class CostEdge extends Edge{
     private int cost = 0;

@@ -1,4 +1,10 @@
-package hirohiso.util.graph;
+package hirohiso.util.graph.structure;
+
+import hirohiso.util.graph.BsdSearch;
+import hirohiso.util.graph.DfsSearch;
+import hirohiso.util.graph.structure.edge.EdgeSet;
+import hirohiso.util.graph.structure.node.Node;
+import hirohiso.util.graph.structure.node.NodeSet;
 
 public class Graph {
 

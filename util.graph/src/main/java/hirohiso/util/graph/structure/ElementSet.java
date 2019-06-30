@@ -1,10 +1,10 @@
-package hirohiso.util.graph;
+package hirohiso.util.graph.structure;
 
 import java.util.ArrayList;
 
 public abstract class ElementSet {
     private ArrayList<Element> elementList = new ArrayList<Element>();
-    abstract boolean chackEnableClass(Element e);
+    public abstract boolean chackEnableClass(Element e);
 
     public void add(Element node) {
         if(!chackEnableClass(node)){

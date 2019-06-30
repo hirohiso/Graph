@@ -1,4 +1,7 @@
-package hirohiso.util.graph;
+package hirohiso.util.graph.structure;
+
+import hirohiso.util.graph.structure.edge.Edge;
+import hirohiso.util.graph.structure.node.Node;
 
 public class Mapping {
     private Edge edge;

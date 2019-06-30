@@ -7,6 +7,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import hirohiso.util.graph.structure.MappingSet;
+import hirohiso.util.graph.structure.node.Node;
+
 public class BsdSearch {
     MappingSet mapping;
     Deque<Node> queue;

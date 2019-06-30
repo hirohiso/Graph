@@ -1,8 +1,11 @@
-package hirohiso.util.graph;
+package hirohiso.util.graph.structure;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import hirohiso.util.graph.structure.edge.Edge;
+import hirohiso.util.graph.structure.node.Node;
 
 public class MappingSet {
     protected ArrayList<Mapping> mappingList = new ArrayList<Mapping>();

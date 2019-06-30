@@ -1,4 +1,4 @@
-package hirohiso.util.graph;
+package hirohiso.util.graph.structure;
 
 public class LinkedMappingSet extends MappingSet {
 
