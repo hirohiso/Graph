@@ -7,7 +7,7 @@ public class EdgeSet  extends ElementSet{
 
     @Override
     public boolean chackEnableClass(Element e) {
-        if (e instanceof Edge) {
+        if (e instanceof AbstractEdge) {
             return true;
         } else {
             return false;

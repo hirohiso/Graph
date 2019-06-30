@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import hirohiso.util.graph.structure.edge.Edge;
+import hirohiso.util.graph.structure.edge.AbstractEdge;
 import hirohiso.util.graph.structure.node.Node;
 
 public class MappingSet {
     protected ArrayList<Mapping> mappingList = new ArrayList<Mapping>();
-    protected HashMap<Node, List<Edge>> egdeMap = new HashMap<Node, List<Edge>>();
+    protected HashMap<Node, List<AbstractEdge>> egdeMap = new HashMap<Node, List<AbstractEdge>>();
     protected HashMap<Node, List<Node>> nodeMap = new HashMap<Node, List<Node>>();
     protected HashMap<Element, List<Node>> edgenodeMap = new HashMap<Element, List<Node>>();
 
@@ -21,7 +21,7 @@ public class MappingSet {
         this.setEdgeNode(func.getEdge(),func.getNode1(), func.getNode2());
     }
 
-    protected void setEdgeNode(Edge edge, Node node1, Node node2) {
+    protected void setEdgeNode(AbstractEdge edge, Node node1, Node node2) {
         List<Node> list = this.edgenodeMap.get(edge);
         if (list == null) {
             list = new ArrayList<Node>();
@@ -30,10 +30,10 @@ public class MappingSet {
         list.add(node1);
         list.add(node2);
     }
-    protected void setEdgeList(Node n1,Edge e){
-        List<Edge> list = this.egdeMap.get(n1);
+    protected void setEdgeList(Node n1,AbstractEdge e){
+        List<AbstractEdge> list = this.egdeMap.get(n1);
         if (list == null) {
-            list = new ArrayList<Edge>();
+            list = new ArrayList<AbstractEdge>();
             this.egdeMap.put(n1, list);
         }
         list.add(e);
@@ -53,10 +53,10 @@ public class MappingSet {
      * @param node1
      * @return
      */
-    public List<Edge> getEdgeList(Node node1) {
-        List<Edge> result = this.egdeMap.get(node1);
+    public List<AbstractEdge> getEdgeList(Node node1) {
+        List<AbstractEdge> result = this.egdeMap.get(node1);
         if(result == null){
-            result = new ArrayList<Edge>();
+            result = new ArrayList<AbstractEdge>();
         }
         return result;
     }

@@ -1,14 +1,15 @@
 package hirohiso.util.graph.structure;
 
+import hirohiso.util.graph.structure.edge.AbstractEdge;
 import hirohiso.util.graph.structure.edge.Edge;
 import hirohiso.util.graph.structure.node.Node;
 
 public class Mapping {
-    private Edge edge;
+    private AbstractEdge edge;
     private Node node1;
     private Node node2;
 
-    public Edge getEdge() {
+    public AbstractEdge getEdge() {
         return edge;
     }
 
@@ -32,7 +33,7 @@ public class Mapping {
         this.node2 = node2;
     }
 
-    public Mapping(Edge edge1, Node node1, Node node2) {
+    public Mapping(AbstractEdge edge1, Node node1, Node node2) {
         this.edge = edge1;
         this.node1 = node1;
         this.node2 = node2;

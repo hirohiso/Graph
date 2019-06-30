@@ -12,6 +12,7 @@ import hirohiso.util.graph.structure.Graph;
 import hirohiso.util.graph.structure.LinkedMappingSet;
 import hirohiso.util.graph.structure.Mapping;
 import hirohiso.util.graph.structure.MappingSet;
+import hirohiso.util.graph.structure.edge.AbstractEdge;
 import hirohiso.util.graph.structure.edge.CostEdge;
 import hirohiso.util.graph.structure.edge.Edge;
 import hirohiso.util.graph.structure.edge.EdgeSet;
@@ -76,7 +77,7 @@ public class GraphTest {
         funcset.add(func);
         funcset.add(func2);
 
-        List<Edge> list = funcset.getEdgeList(node1);
+        List<AbstractEdge> list = funcset.getEdgeList(node1);
         assertTrue(list.contains(edge1));
         assertFalse(list.contains(edge2));
 
@@ -264,7 +265,7 @@ public class GraphTest {
         funcset.add(func);
         funcset.add(func2);
 
-        List<Edge> list3 = funcset.getEdgeList(node2);
+        List<AbstractEdge> list3 = funcset.getEdgeList(node2);
         assertTrue(list3.contains(edge1));
         List<Node> list4 = funcset.getAdjacentNodeList(node4);
         assertTrue(list4.contains(node1));

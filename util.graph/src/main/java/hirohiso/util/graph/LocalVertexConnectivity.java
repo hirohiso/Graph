@@ -7,6 +7,7 @@ import hirohiso.util.graph.structure.Element;
 import hirohiso.util.graph.structure.Graph;
 import hirohiso.util.graph.structure.Mapping;
 import hirohiso.util.graph.structure.MappingSet;
+import hirohiso.util.graph.structure.edge.AbstractEdge;
 import hirohiso.util.graph.structure.edge.CostEdge;
 import hirohiso.util.graph.structure.edge.Edge;
 import hirohiso.util.graph.structure.edge.EdgeSet;
@@ -42,9 +43,9 @@ public class LocalVertexConnectivity {
             Node out = new Node();
             targetNodeSet.add(in);
             targetNodeSet.add(out);
-            Edge edge1 = new CostEdge(1);
+            AbstractEdge edge1 = new CostEdge(1);
             targetEdgeSet.add(edge1);
-            Mapping map = new Mapping(edge1, in, out);
+            Mapping map = new Mapping((AbstractEdge) edge1, in, out);
             targetMappingSet.add(map);
 
             //次の処理のために、Vn→Vn_inとVn_outの紐付けを格納しておく
@@ -56,8 +57,8 @@ public class LocalVertexConnectivity {
         //E1 → Vn_out Vm_inとなるコスト1の辺を作成する
         //E2 → Vm_out Vn_inとなるコスト1の辺を作成する
         for(Element edge :orignalEdge){
-            Edge edge1 = new CostEdge(1);
-            Edge edge2 = new CostEdge(1);
+            AbstractEdge edge1 = new CostEdge(1);
+            AbstractEdge edge2 = new CostEdge(1);
             targetEdgeSet.add(edge1);
             targetEdgeSet.add(edge2);
 
@@ -71,8 +72,8 @@ public class LocalVertexConnectivity {
             Node vm_in = NodeIn.get(Vm);
             Node vm_out = NodeOut.get(Vm);
 
-            Mapping map1 = new Mapping(edge1, vn_out, vm_in);
-            Mapping map2 = new Mapping(edge2, vm_out, vn_in);
+            Mapping map1 = new Mapping((AbstractEdge) edge1, vn_out, vm_in);
+            Mapping map2 = new Mapping((AbstractEdge) edge2, vm_out, vn_in);
             targetMappingSet.add(map1);
             targetMappingSet.add(map2);
         }
